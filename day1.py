@@ -2,6 +2,6 @@ inp = "3893445835429722678558456317563893861752455542588369533636585887178232467
 jump = int(len(inp) / 2)  # jump is 1 for first half of challenge
 total = 0
 for i in range(0, len(inp)):
-    if inp[i] == inp[(i + jump) % len(inp)]:
+    if inp[i] == inp[(i + jump) % len(inp)]:    # mod is used so last item in list is compared to first item
         total += int(inp[i])
 print(total)
