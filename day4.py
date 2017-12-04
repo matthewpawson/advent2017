@@ -5,10 +5,10 @@ with open('day4in.txt') as inp:
     for lines in content:
         splitLine = lines.split()
         total = 0
-        for anagram in splitLine:   # module is required for part B of the
+        for anagram in splitLine:   # this for is ONLY required for part B of the
             l = list(anagram)       # task: it sorts every word prior to checking
             l.sort()                # in order for comparison
-            splitLine[splitLine.index(anagram)] = ''.join(l)
+            splitLine[splitLine.index(anagram)] = ''.join(l)    # use on part A will not work
         for word in splitLine:
             for check in splitLine:
                 if check == word:
